@@ -25,8 +25,9 @@ const routes: Routes = [
   }
 ];
 
+/* Adicionamos un parametro en forRoot para que las paginas que se visitan son exclusivamente angular, ello para que me interprete las rutas /auth/login y no las tome como una carpeta */
 @NgModule({
-  imports: [RouterModule.forRoot(routes)],
+  imports: [RouterModule.forRoot(routes, { useHash: true })],
   exports: [RouterModule]
 })
 export class AppRoutingModule { }
